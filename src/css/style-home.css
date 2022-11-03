@@ -1,0 +1,68 @@
+body {
+  font-family: "Montserrat";
+  font-size: 22px;
+  background-color: #000;
+}
+
+p {
+  margin: 0;
+}
+.navbar {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+#btn-1 {
+  background-color: #febb40;
+}
+
+#btn-1:hover {
+  background-color: #fdc55d;
+}
+
+main {
+  height: 92vh;
+}
+
+footer {
+  background-color: #febb40;
+  height: 8vh;
+}
+
+#text-1 {
+  font-weight: 400;
+  font-size: 105.123px;
+  line-height: 158px;
+}
+
+#text-2 {
+  font-weight: 700;
+  font-size: 170px;
+}
+
+#text-2 span:first-child {
+  color: #febb40;
+}
+
+#text-2 span:last-child {
+  color: #fff;
+}
+
+#text-3 {
+  padding: 0px 179px;
+  background-color: #febb40;
+  border-radius: 96px;
+}
+
+#text-3:hover {
+  background-color: #fdc55d;
+  cursor: pointer;
+}
+
+#btn-link {
+  color: #000;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 130px;
+  letter-spacing: 0.06em;
+}
