@@ -36,8 +36,8 @@ footer {
 }
 
 #text-2 {
-  font-weight: bold;
-  font-size: 120px;
+  font-weight: 700;
+  font-size: 170px;
 }
 
 #text-2 span:first-child {
@@ -50,16 +50,21 @@ footer {
 
 #text-3 {
   padding: 0px 179px;
+  background-color: #febb40;
+  border-radius: 96px;
+}
+
+#text-3:hover {
+  background-color: #fdc55d;
+  cursor: pointer;
 }
 
 #btn-link {
   color: #000;
-  background-color: #febb40;
-  font-size: 65px;
   font-weight: 700;
+  font-size: 65px;
+  line-height: 130px;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
 }
 
 .video-one {
