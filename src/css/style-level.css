@@ -29,22 +29,22 @@ main > div {
   margin-top: 50px;
 }
 
-#jawa,
-#sunda,
-#bali {
+#level1,
+#level2,
+#level3 {
   background-color: #febb40;
   border-radius: 80px;
 }
 
-#jawa:hover,
-#sunda:hover,
-#bali:hover {
+#level1:hover,
+#level2:hover,
+#level3:hover {
   background-color: #fdc55d;
 }
 
-#jawa a:last-child,
-#sunda a:last-child,
-#bali a:last-child {
+#level1 a:last-child,
+#level2 a:last-child,
+#level3 a:last-child {
   color: #000;
   font-weight: 700;
   font-size: 48.0154px;
