@@ -1,0 +1,52 @@
+body {
+  font-family: "Montserrat";
+  font-size: 22px;
+  background-color: #000;
+}
+
+main {
+  height: 82vh;
+}
+
+footer {
+  background-color: #febb40;
+  height: 8vh;
+}
+
+p {
+  margin: 0;
+}
+.navbar {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+ul li a {
+  color: #fff;
+}
+
+main > div {
+  margin-top: 50px;
+}
+
+#jawa,
+#sunda,
+#bali {
+  background-color: #febb40;
+  border-radius: 80px;
+}
+
+#jawa:hover,
+#sunda:hover,
+#bali:hover {
+  background-color: #fdc55d;
+}
+
+#jawa a:last-child,
+#sunda a:last-child,
+#bali a:last-child {
+  color: #000;
+  font-weight: 700;
+  font-size: 48.0154px;
+  line-height: 96px;
+}
