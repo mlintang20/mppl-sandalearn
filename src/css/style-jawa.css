@@ -1,0 +1,90 @@
+body {
+  font-family: "Montserrat";
+  font-size: 22px;
+  background-color: #000;
+}
+
+main {
+  height: 98vh;
+}
+
+footer {
+  background-color: #febb40;
+  height: 8vh;
+}
+
+p {
+  margin: 0;
+}
+.navbar {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+ul li a {
+  color: #fff;
+}
+
+main > div {
+  margin-top: 5px;
+}
+
+#container {
+  background-color: #febb40;
+  color: #000;
+  border-radius: 65px;
+  font-weight: 700;
+}
+
+.pilihan {
+  cursor: pointer;
+  background-color: #cbd5e0;
+  width: 300px;
+  height: 137px;
+  border-radius: 19px;
+  font-size: 40px;
+}
+
+.pilihanPembahasan {
+  cursor: pointer;
+  background-color: #cbd5e0;
+  width: 300px;
+  height: 137px;
+  border-radius: 19px;
+  font-size: 40px;
+}
+
+.pilihan:hover {
+  background-color: #1597e9;
+  transition: 0.5s;
+}
+
+#prev,
+#next {
+  background-color: #000;
+  border-radius: 5px;
+}
+
+#left,
+#mid,
+#right {
+  background-color: #000;
+  width: 300px;
+  padding: 10px 0px;
+  border-radius: 15px;
+  align-items: center;
+}
+
+#left a,
+#mid a,
+#right a {
+  color: #fff;
+}
+
+#prev:hover,
+#next:hover,
+#left:hover,
+#mid:hover,
+#right:hover {
+  background-color: rgb(37, 37, 37);
+}
