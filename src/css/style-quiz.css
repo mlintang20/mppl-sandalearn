@@ -29,16 +29,16 @@ main > div {
   margin-top: 150px;
 }
 
-#jawa > a,
-#sunda > a,
-#bali > a {
+#jawa,
+#sunda,
+#bali {
   background-color: #febb40;
   border-radius: 80px;
 }
 
-#jawa > a:hover,
-#sunda > a:hover,
-#bali > a:hover {
+#jawa:hover,
+#sunda:hover,
+#bali:hover {
   background-color: #fdc55d;
 }
 

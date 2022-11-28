@@ -26,17 +26,17 @@ ul li a {
 }
 
 main > div {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
-#audio > a,
-#gambar > a {
+#audio,
+#gambar {
   background-color: #febb40;
   border-radius: 80px;
 }
 
-#audio > a:hover,
-#gambar > a:hover {
+#audio:hover,
+#gambar:hover {
   background-color: #fdc55d;
 }
 
@@ -46,4 +46,16 @@ main > div {
   font-weight: 700;
   font-size: 48.0154px;
   line-height: 96px;
+}
+
+#jawa {
+  background-color: #fff;
+  border-radius: 36px;
+}
+
+#jawa div:last-child {
+  color: #000;
+  font-weight: 700;
+  font-size: 18.5px;
+  line-height: 37px;
 }

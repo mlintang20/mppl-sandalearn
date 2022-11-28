@@ -50,3 +50,17 @@ main > div {
   font-size: 48.0154px;
   line-height: 96px;
 }
+
+#jawa,
+#gambar {
+  background-color: #fff;
+  border-radius: 36px;
+}
+
+#jawa div:last-child,
+#gambar div:last-child {
+  color: #000;
+  font-weight: 700;
+  font-size: 18.5px;
+  line-height: 37px;
+}
