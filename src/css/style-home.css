@@ -49,7 +49,7 @@ footer {
 }
 
 #text-3 {
-  padding: 0px 179px;
+  padding: 0px;
   background-color: #febb40;
   border-radius: 96px;
 }
@@ -64,5 +64,5 @@ footer {
   font-weight: 700;
   font-size: 65px;
   line-height: 130px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.03em;
 }
