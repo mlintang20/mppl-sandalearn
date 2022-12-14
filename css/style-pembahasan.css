@@ -1,0 +1,91 @@
+body {
+  font-family: "Montserrat";
+  font-size: 22px;
+  background-color: #000;
+}
+
+p {
+  margin: 0;
+}
+.navbar {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.pertanyaan {
+  /* box-shadow: 4px -4px 8px #febb40, -4px 4px 8px #febb40, 4px 4px 8px #febb40, -4px -4px 8px #febb40; */
+  background-color: #febb40;
+  color: #000;
+  border-radius: 65px;
+  font-weight: 700;
+  padding: 30px 0;
+}
+
+/* input[type="radio"] {
+  content: url("http://i.stack.imgur.com/M3EkO.png");
+  height: 55px;
+  width: 55px;
+  transform: translateY(40px);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+} */
+
+/* input:checked {
+  content: url("http://i.stack.imgur.com/Ialva.png");
+} */
+
+.pilihan {
+  font-size: 2.5em;
+  cursor: pointer;
+  background-color: #cbd5e0;
+  width: 300px;
+  height: 137px;
+  line-height: 115px;
+  border-radius: 19px;
+}
+
+/* .pilihan:hover {
+  background-color: #1597e9;
+} */
+
+/* #container {
+  background-color: #febb40;
+  color: #000;
+  border-radius: 65px;
+  font-weight: 700;
+} */
+
+#pembahasan {
+  width: 240px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #fff;
+  cursor: pointer;
+
+  transition-property: all;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-out;
+  /* transition-delay: 1s; */
+}
+
+#pembahasan:hover {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.1);
+  /* transition: all 0.7s ease;
+  transition-duration: 0.5s; */
+}
+
+.benar {
+  background-color: #66eca9;
+}
+
+.salah {
+  background-color: #f07575;
+}
+
+.kosong {
+  background-color: #000;
+  color: #fff;
+}
