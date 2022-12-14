@@ -2,6 +2,8 @@
 
   include "config.php";
 
+  session_start();
+
   if(isset($_POST['submit'])){
     if(!empty($_POST['quizcheck'])){
       $counter = count($_POST['quizcheck']);
@@ -18,16 +20,32 @@
           if($checked){
             $hasil++;
           }
+
+          if($i == 1){
+            $_SESSION['soal-1'] = $selected[1];
+          }
+          else if($i == 2){
+            $_SESSION['soal-2'] = $selected[2];
+          }
+          else if($i == 3){
+            $_SESSION['soal-3'] = $selected[3];
+          }
         }
         $i++;
       }
 
       echo "<br>Soal yang dijawab dengan benar: " . $hasil . " soal.";
       echo "<br>Skor Anda adalah: " . ($hasil * 100) . " poin.";
+      
+      $_SESSION['submit'] = $_POST['submit'];
+      $_SESSION['quizcheck'] = $_POST['quizcheck'];
     } else{
       echo "Anda tidak menjawab 1 soal pun :(";
     }
+    echo '<br /><a href="pembahasan.php">PEMBAHASAN</a>';
+
   }
+
 
 ?>
 
