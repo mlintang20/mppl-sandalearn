@@ -1,6 +1,6 @@
 <?php
 
-  include "config.php";
+  include "../config.php";
 
 ?>
 
@@ -15,9 +15,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
 
-  <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.min.css">
 
-  <link rel="stylesheet" href="css/style-quiz.css">
+  <link rel="stylesheet" href="../css/style-quiz.css">
 
   <!-- CDN Bootstrap CSS -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> -->
@@ -36,16 +36,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-5 mb-2 mb-lg-0 text-xl-center">
             <li class="nav-item me-5">
-              <a class="nav-link text-white fw-normal" aria-current="page" href="./index.html">Beranda</a>
+              <a class="nav-link text-white fw-normal" aria-current="page" href="../index.html">Beranda</a>
             </li>
             <li class="nav-item me-5">
               <a class="nav-link text-white fw-semibold" href="./quiz.php">Kuis</a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link text-white fw-normal" href="./history.html">Riwayat</a>
+              <a class="nav-link text-white fw-normal" href="../history.html">Riwayat</a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link text-white fw-normal" href="./scoreboard.html">Papan Skor</a>
+              <a class="nav-link text-white fw-normal" href="../scoreboard.html">Papan Skor</a>
             </li>
           </ul>
         </div>
@@ -65,7 +65,7 @@
 
               <div class="card mb-4 pertanyaan" id="container-<?= $i; ?>">
                 <!-- <h4 class="card-header">NO <?= $i . ". " . $rows['pertanyaan']; ?></h4> -->
-                <img src="images/<?php echo $rows['gambar_soal']; ?>" width="300" class="align-self-center" alt="">
+                <img src="../images/<?php echo $rows['gambar_soal']; ?>" width="300" class="align-self-center" alt="">
                 <h4 class="mb-4 col-10 mx-auto d-flex justify-content-center align-items-center">NO <?= $i . ". " . $rows['pertanyaan']; ?></h4>
                 <div class="mb-3 col-11 mx-auto d-flex justify-content-center align-items-center">
                   <?php

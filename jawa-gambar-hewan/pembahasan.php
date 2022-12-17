@@ -1,6 +1,6 @@
 <?php
 
-  include "config.php";
+  include "../config.php";
 
   session_start();
 
@@ -60,9 +60,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
 
-    <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-5.2.2-dist/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="css/style-pembahasan.css">
+    <link rel="stylesheet" href="../css/style-pembahasan.css">
 </head>
 <body class="text-light">
 
@@ -78,7 +78,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-5 mb-2 mb-lg-0 text-xl-center">
           <li class="nav-item me-5">
-            <a class="nav-link text-white fw-normal" aria-current="page" href="./index.html">Beranda</a>
+            <a class="nav-link text-white fw-normal" aria-current="page" href="../index.html">Beranda</a>
           </li>
           <li class="nav-item me-5">
             <a class="nav-link text-white fw-semibold" href="./quiz.php">Kuis</a>
@@ -106,7 +106,7 @@
         ?>
 
               <div class="card mb-4 pertanyaan" id="container">
-                <img src="images/<?php echo $rows['gambar_soal']; ?>" width="300" class="align-self-center" alt="">
+                <img src="../images/<?php echo $rows['gambar_soal']; ?>" width="300" class="align-self-center" alt="">
                 <h4 class="mb-4 col-10 mx-auto d-flex justify-content-center align-items-center text-uppercase fw-bold <?php if(isset($selected[$i])){ if($i == 1){echo $soal1;} else if($i == 2){echo $soal2;} else if($i == 3){echo $soal3;} } else{ echo "kosong"; } ?>"><?php if(isset($selected[$i])){ if($i == 1){echo $soal1;} else if($i == 2){echo $soal2;} else if($i == 3){echo $soal3;} } else{ echo "TIDAK MENJAWAB"; } ?></h4>
                 <h4 class="mb-4 col-10 mx-auto d-flex justify-content-center align-items-center fw-semibold">NO <?= $i . ". " . $rows['pertanyaan']; ?></h4>
                 <div class="mb-3 col-11 mx-auto d-flex justify-content-center align-items-center">
@@ -166,3 +166,8 @@
   </div>
 </body>
 </html>
+
+<?php
+  session_unset();
+  session_destroy();
+?>
