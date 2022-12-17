@@ -54,7 +54,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SANDALEARN</title>
+  <title>Kuis</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
@@ -64,6 +64,7 @@
   <link rel="stylesheet" href="css/style-check.css"></head>
 <head>
 <body class="text-light">
+
   <!-- Navbar -->
   <nav class="navbar navbar-dark navbar-expand-lg">
       <div class="container-fluid mx-5 col-lg-10 mx-auto text-dark py-2">
@@ -79,13 +80,13 @@
               <a class="nav-link text-white fw-normal" aria-current="page" href="./index.html">Beranda</a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link text-white fw-semibold" href="./quiz.php">Kuis</a>
+              <a class="nav-link text-white fw-semibold" href="./index-bahasa.php">Kuis</a>
             </li>
             <li class="nav-item me-5">
               <a class="nav-link text-white fw-normal" href="./history.php">Riwayat</a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link text-white fw-normal" href="./scoreboard.html">Papan Skor</a>
+              <a class="nav-link text-white fw-normal" href="./scoreboard-bahasa.php">Papan Skor</a>
             </li>
           </ul>
         </div>

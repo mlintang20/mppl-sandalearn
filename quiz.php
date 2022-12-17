@@ -2,14 +2,16 @@
 
   include "config.php";
   session_start();
-  session_regenerate_id();
 
-  # Init sementara
-  # $_SESSION['tipe'] = "audio";
-  $_SESSION['tipe'] = "gambar";
-  $_SESSION['level'] = 1;
-  $_SESSION['bahasa'] = "jawa";
-  # 
+  if (isset($_GET['lvl'])) {
+    if ($_GET['lvl'] == "1"){
+      $_SESSION['level'] = "1"; 
+    } elseif ($_GET['lvl'] == "2") { 
+      $_SESSION['level'] = "2" ;
+    } else { 
+      $_SESSION['level'] = "2" ;
+    }
+  } else { $_SESSION['lvl'] = "1"; }
   
   $tipe = $_SESSION['tipe'];
   $level = $_SESSION['level'];
@@ -41,6 +43,8 @@
 </head>
 <body class="text-light">
 
+<body class="text-light">
+
   <!-- Navbar -->
   <nav class="navbar navbar-dark navbar-expand-lg">
       <div class="container-fluid mx-5 col-lg-10 mx-auto text-dark py-2">
@@ -56,13 +60,13 @@
               <a class="nav-link text-white fw-normal" aria-current="page" href="./index.html">Beranda</a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link text-white fw-semibold" href="./quiz.php">Kuis</a>
+              <a class="nav-link text-white fw-semibold" href="./index-bahasa.php">Kuis</a>
             </li>
             <li class="nav-item me-5">
               <a class="nav-link text-white fw-normal" href="./history.php">Riwayat</a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link text-white fw-normal" href="./scoreboard.php">Papan Skor</a>
+              <a class="nav-link text-white fw-normal" href="./scoreboard-bahasa.php">Papan Skor</a>
             </li>
           </ul>
         </div>

@@ -67,7 +67,8 @@
 </head>
 <body class="text-light">
 
-<nav class="navbar navbar-dark navbar-expand-lg">
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark navbar-expand-lg">
       <div class="container-fluid mx-5 col-lg-10 mx-auto text-dark py-2">
         <div class="py-3">
           <img src="./img/logo.png" alt="" />
@@ -81,13 +82,13 @@
               <a class="nav-link text-white fw-normal" aria-current="page" href="./index.html">Beranda</a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link text-white fw-semibold" href="./quiz.php">Kuis</a>
+              <a class="nav-link text-white fw-semibold" href="./index-bahasa.php">Kuis</a>
             </li>
             <li class="nav-item me-5">
               <a class="nav-link text-white fw-normal" href="./history.php">Riwayat</a>
             </li>
             <li class="nav-item me-5">
-              <a class="nav-link text-white fw-normal" href="./scoreboard.php">Papan Skor</a>
+              <a class="nav-link text-white fw-normal" href="./scoreboard-bahasa.php">Papan Skor</a>
             </li>
           </ul>
         </div>

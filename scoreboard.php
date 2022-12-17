@@ -1,11 +1,20 @@
 <?php
 
     include "config.php";
-    session_start();
+    if (isset($_GET['bahasa'])) {
+        if ($_GET['bahasa'] == "jawa"){
+            $bahasa = "jawa" ;
+        } elseif ($_GET['bahasa'] == "sunda") {
+            $bahasa = "sunda" ;
+        } else { 
+            $bahasa = "bali" ;
+        }
+    } else { $bahasa = "jawa"; }
 
-    $sql = "SELECT * FROM kuis k NATURAL JOIN sesi s ORDER BY waktu_selesai DESC LIMIT 10";
+    $sql = "SELECT * FROM kuis k NATURAL JOIN sesi s WHERE bahasa = '$bahasa' ORDER BY skor DESC LIMIT 10";
 
     $query = mysqli_query($db, $sql);
+    echo strtoupper($bahasa);
     echo "<table>";
     while($row = mysqli_fetch_array($query)) {
         $id = $row['id_sesi'];
