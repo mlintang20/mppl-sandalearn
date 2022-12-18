@@ -105,7 +105,7 @@
                       <input type="radio" name="quizcheck[<?= $rows_jwb['id_soal']; ?>]" value="<?= $rows_jwb['id_jawaban']; ?>">
                       <?= $rows_jwb['jawaban']; ?>
                     </div> -->
-                    <section class="pilihan ms-3 me-4 d-flex justify-content-center" id="<?= $i.$j; ?>">
+                    <section class="pilihan ms-2 me-3 d-flex justify-content-center" id="<?= $i.$j; ?>">
                       <input onclick="javascript: 
                             if(<?= $j; ?> == 1){
                               document.getElementById('<?= $i.'1'; ?>').classList.add('soal-checked');
@@ -152,7 +152,5 @@
     </div>
   </div>
   
-
-
 </body>
 </html>
