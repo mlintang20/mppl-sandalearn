@@ -45,7 +45,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-5 mb-2 mb-lg-0 text-xl-center">
               <li class="nav-item me-5">
-                <a class="nav-link text-white fw-semibold" aria-current="page" href="./index.html">Beranda</a>
+                <a class="nav-link text-white fw-normal" aria-current="page" href="./index.html">Beranda</a>
               </li>
               <li class="nav-item me-5">
                 <a class="nav-link text-white fw-normal" href="./index-bahasa.php">Kuis</a>
@@ -54,7 +54,7 @@
                 <a class="nav-link text-white fw-normal" href="./history.php">Riwayat</a>
               </li>
               <li class="nav-item me-5">
-                <a class="nav-link text-white fw-normal" href="./scoreboard-bahasa.php">Papan Skor</a>
+                <a class="nav-link text-white fw-semibold" href="./scoreboard-bahasa.php">Papan Skor</a>
               </li>
             </ul>
           </div>
@@ -67,7 +67,7 @@
         <div class="col-10 mx-auto d-flex justify-content-center align-items-center">
             <section class="text-center">
                 <?php
-                    $sql = "SELECT * FROM kuis k NATURAL JOIN sesi s WHERE bahasa = '$bahasa' ORDER BY skor DESC LIMIT 5";
+                    $sql = "SELECT * FROM kuis k NATURAL JOIN sesi s WHERE bahasa = '$bahasa' ORDER BY skor DESC LIMIT 7";
 
                     $query = mysqli_query($db, $sql);
                     echo strtoupper($bahasa);
@@ -91,16 +91,16 @@
                         <td><?php echo $t ?></td>
                         <td><?php echo $score ?></td>
                         <td>
-                            <section class="d-flex flex-column justify-content-center text-center" style="width: 70px; height: 70px" id="bahasa">
+                            <section class="d-flex flex-column justify-content-center text-center" style="width: 50px; height: 50px" id="bahasa">
                                 <div class="text-decoration-none">
-                                    <img src="./img/type/<?php echo $tipe?>.png" width="65" alt="" />
+                                    <img src="./img/type/<?php echo $tipe?>.png" width="30" alt="" />
                                 </div>
                             </section>
                         </td>
                         <td>
-                            <section class="d-flex flex-column justify-content-center text-center" style="width: 70px; height: 70px" id="bahasa">
+                            <section class="d-flex flex-column justify-content-center text-center" style="width: 50px; height: 50px" id="bahasa">
                                 <div class="text-decoration-none">
-                                    <img src="./img/level/<?php echo $lvl?>.png" width="65" alt="" />
+                                    <img src="./img/level/<?php echo $lvl?>.png" width="30" alt="" />
                                 </div>
                             </section>
                         </td>
