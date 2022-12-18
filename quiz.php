@@ -38,11 +38,7 @@
 
   <link rel="stylesheet" href="css/style-quiz.css">
 
-  <!-- CDN Bootstrap CSS -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> -->
 </head>
-<body class="text-light">
-
 <body class="text-light">
 
   <!-- Navbar -->
@@ -76,31 +72,34 @@
 
   <div class="container">
     <div class="col-lg-11 my-5 mx-auto">
-      <form action="check.php" method="POST">
-        <?php
-          $idq = $_SESSION['id_kuis'];
-          $i = 1;
-          $query = mysqli_query($db, "SELECT * FROM soal WHERE id_kuis = $idq");
-          while ($rows = mysqli_fetch_array($query)) {
-            $ids = $rows['id_soal'];
-        ?>
+      <?php
+        if (isset($_SESSION['id_kuis'])) {
+      ?>
+        <form action="check.php" method="POST">
+          <?php
+            $idq = $_SESSION['id_kuis'];
+            $i = 1;
+            $query = mysqli_query($db, "SELECT * FROM soal WHERE id_kuis = $idq");
+            while ($rows = mysqli_fetch_array($query)) {
+              $ids = $rows['id_soal'];
+          ?>
             <div class="card mb-4 pertanyaan" id="container-<?= $i; ?>">
               <!-- <h4 class="card-header">NO <?= $i . ". " . $rows['pertanyaan']; ?></h4> -->
               <?php if($_SESSION['tipe'] == "gambar"): ?>
                 <img src="images/<?php echo $rows['attachment']; ?>" width="300" class="align-self-center" alt="">
-              <?php else: ?>
-                <audio controls class="align-self-center" style="width: 500px; margin-top: 125px; margin-bottom: 50px;">
-                  <source src="audio/<?php echo $rows['attachment']; ?>" type="audio/mpeg">
-                </audio>
-              <?php endif ?>
-              <h4 class="mb-4 col-10 mx-auto d-flex justify-content-center align-items-center">No <?= $i . ". " . $rows['pertanyaan']; ?></h4>
-              <div class="mb-3 col-11 mx-auto d-flex justify-content-center align-items-center">
-                <?php
+                <?php else: ?>
+                  <audio controls class="align-self-center" style="width: 500px; margin-top: 125px; margin-bottom: 50px;">
+                    <source src="audio/<?php echo $rows['attachment']; ?>" type="audio/mpeg">
+                  </audio>
+                  <?php endif ?>
+                  <h4 class="mb-4 col-10 mx-auto d-flex justify-content-center align-items-center">No <?= $i . ". " . $rows['pertanyaan']; ?></h4>
+                  <div class="mb-3 col-11 mx-auto d-flex justify-content-center align-items-center">
+                    <?php
                   $query_jwb = mysqli_query($db, "SELECT * FROM jawaban WHERE id_soal = $ids");
-
+                  
                   $j = 1;
                   while ($rows_jwb = mysqli_fetch_array($query_jwb)) {
-                ?>
+                    ?>
                     <!-- <div class="card-body">
                       <input type="radio" name="quizcheck[<?= $rows_jwb['id_soal']; ?>]" value="<?= $rows_jwb['id_jawaban']; ?>">
                       <?= $rows_jwb['jawaban']; ?>
@@ -131,24 +130,29 @@
                               document.getElementById('<?= $i.'3'; ?>').classList.remove('soal-checked');
                               document.getElementById('<?= $i.'4'; ?>').classList.add('soal-checked');
                             }
-                          "
+                            "
                         type="radio" name="quizcheck[<?= $i; ?>]" value="<?= $rows_jwb['id_jawaban']; ?>" id="quizcheck[<?= $i; ?>]">
-                      <?= $rows_jwb['jawaban']; ?>
-                    </section>
-                <?php
+                        <?= $rows_jwb['jawaban']; ?>
+                      </section>
+                      <?php
                     $j++;
                   }
                 ?>
               </div>
             </div>
+          <?php
+              $i++;
+            }
+          ?>
 
-        <?php
-            $i++;
-          }
-        ?>
-
-        <input type="submit" name="submit" value="Selesai" class="btn btn-success mt-3 mx-auto d-block">
-      </form>
+          <input type="submit" name="submit" value="Selesai" class="btn btn-success mt-3 mx-auto d-block">
+        </form>
+        
+      <?php 
+        } else {
+          echo "<h2>Question does not Exist</h2>";
+        }
+      ?>
     </div>
   </div>
   
