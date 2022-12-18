@@ -66,34 +66,3 @@ footer {
   line-height: 130px;
   letter-spacing: 0.03em;
 }
-
-/* Index bahasa */
-ul li a {
-  color: #fff;
-}
-
-main > div {
-  margin-top: 150px;
-}
-
-#jawa,
-#sunda,
-#bali {
-  background-color: #febb40;
-  border-radius: 80px;
-}
-
-#jawa:hover,
-#sunda:hover,
-#bali:hover {
-  background-color: #fdc55d;
-}
-
-#jawa a:last-child,
-#sunda a:last-child,
-#bali a:last-child {
-  color: #000;
-  font-weight: 700;
-  font-size: 48.0154px;
-  line-height: 96px;
-}
