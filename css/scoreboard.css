@@ -26,7 +26,34 @@ ul li a {
 }
 
 main > div {
-  margin-top: 25px;
+  margin-top: 5px;
+}
+
+#judul {
+  background-color: #febb40;
+  color: #000;
+  width: 90vw;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+table {
+  background-color: #424242;
+  width: 90vw;
+  height: 28vw;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+#tipe {
+  transform: translateX(25px);
+}
+
+#level {
+  transform: translateX(45px);
 }
 
 #bahasa {

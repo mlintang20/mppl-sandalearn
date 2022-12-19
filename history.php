@@ -57,6 +57,10 @@
     <main>
         <div class="col-10 mx-auto d-flex justify-content-center align-items-center">
             <section class="text-center">
+                <div class="text-black" id="judul">
+                  RIWAYAT
+                </div>
+
                 <?php
                     $sql = "SELECT * FROM kuis k NATURAL JOIN sesi s ORDER BY waktu_selesai DESC LIMIT 8";
 
@@ -64,9 +68,9 @@
                 ?>
                     <table>
                     <tr>
-                        <th scope="col">id_sesi</th>
-                        <th scope="col">waktu_selesai</th>
-                        <th scope="col">skor</th>
+                        <th scope="col">ID SESI</th>
+                        <th scope="col">WAKTU</th>
+                        <th scope="col">SKOR</th>
                     </tr>
                 <?php
                     while($row = mysqli_fetch_array($query)) {

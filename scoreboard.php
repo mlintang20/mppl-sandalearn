@@ -66,38 +66,45 @@
     <main>
         <div class="col-10 mx-auto d-flex justify-content-center align-items-center">
             <section class="text-center">
-                <?php
+                <div class="text-black" id="judul">
+                  <?php
                     $sql = "SELECT * FROM kuis k NATURAL JOIN sesi s WHERE bahasa = '$bahasa' ORDER BY skor DESC LIMIT 7";
-
+                    
                     $query = mysqli_query($db, $sql);
-                    echo strtoupper($bahasa);
-                ?>
-                    <table>
+                    echo "BAHASA " . strtoupper($bahasa);
+                    ?>
+                </div>
+                
+                <div id="table-container">
+                  <table>
                     <tr>
-                        <th scope="col">id_sesi</th>
-                        <th scope="col">waktu_selesai</th>
-                        <th scope="col">skor</th>
-                    </tr>
-                <?php
-                    while($row = mysqli_fetch_array($query)) {
-                        $id = $row['id_sesi'];
-                        $t = $row['waktu_selesai'];
-                        $score = $row['skor'];
-                        $tipe = $row['media'];
-                        $lvl = $row['level'];
-                ?>
+                        <th scope="col">ID SESI</th>
+                        <th scope="col">WAKTU</th>
+                        <th scope="col">SKOR</th>
+                        <th scope="col">TIPE</th>
+                        <th scope="col">LEVEL</th>
+                      </tr>
+
+                    <?php
+                        while($row = mysqli_fetch_array($query)) {
+                            $id = $row['id_sesi'];
+                            $t = $row['waktu_selesai'];
+                            $score = $row['skor'];
+                            $tipe = $row['media'];
+                            $lvl = $row['level'];
+                    ?>
                     <tr>
                         <td><?php echo $id ?></td>
                         <td><?php echo $t ?></td>
                         <td><?php echo $score ?></td>
-                        <td>
-                            <section class="d-flex flex-column justify-content-center text-center" style="width: 50px; height: 50px" id="bahasa">
+                        <td id="tipe">
+                            <section class="d-flex flex-column justify-content-center align-items-center text-center" style="width: 50px; height: 50px" id="bahasa">
                                 <div class="text-decoration-none">
                                     <img src="./img/type/<?php echo $tipe?>.png" width="30" alt="" />
                                 </div>
                             </section>
                         </td>
-                        <td>
+                        <td id="level">
                             <section class="d-flex flex-column justify-content-center text-center" style="width: 50px; height: 50px" id="bahasa">
                                 <div class="text-decoration-none">
                                     <img src="./img/level/<?php echo $lvl?>.png" width="30" alt="" />
@@ -105,10 +112,11 @@
                             </section>
                         </td>
                     </tr>
-                <?php
-                    }
-                    echo "</table>";
-                ?>
+                    <?php
+                        }
+                    ?>
+                  </table>
+                </div>
             </section>
         </div>
     </main>
