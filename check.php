@@ -5,6 +5,7 @@
   session_start();
   $sid = session_id();
   $idq = $_SESSION['id_kuis'];
+  $tipe = $_SESSION['tipe'];
   
   if(isset($_POST['submit'])){
     $hasil = 0;
@@ -113,13 +114,13 @@
 
         <div class="my-5 col-11 mx-auto d-flex justify-content-center align-items-center">
           <section class="ms-5 me-5 d-flex flex-column justify-content-center" id="left">
-            <a href="../../quiz.html" class="text-decoration-none">MENU</a>
+            <a href="./index-bahasa.php" class="text-decoration-none">MENU</a>
           </section>
           <section class="ms-5 me-5 d-flex flex-column justify-content-center" id="mid">
-              <a href="pembahasan.php">PEMBAHASAN</a>
+            <a href="pembahasan.php" class="text-decoration-none">PEMBAHASAN</a>
           </section>
           <section class="ms-5 me-5 d-flex flex-column justify-content-center" id="right">
-            <a href="../quiz-level-gambar.html" class="text-decoration-none">NEXT LEVEL</a>
+            <a href="./index-level.php?tipe=<?= $_SESSION['tipe']; ?>" class="text-decoration-none">NEXT LEVEL</a>
           </section>
         </div>
       </div>
